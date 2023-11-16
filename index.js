@@ -4,12 +4,12 @@ import cors from "cors";
 import userRoute from "./routes/userRoute.js";
 import 'dotenv/config';
 
-const PORT = process.env.PORT; // Use process.env.PORT or default to 3000
-const DB_URI = process.env.DB_URI;
+const PORT = process.env.PORT;
+const USERNAME = process.env.USERNAME
+const PASSWORD = process.env.PASSWORD
 
-console.log(DB_URI);
-
-mongoose.connect(DB_URI, {
+const app = express()
+mongoose.connect(`mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.tj7dd9n.mongodb.net/?retryWrites=true&w=majority`, {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
 });
@@ -23,8 +23,6 @@ db.on("error", (error) => {
 db.once("open", () => {
     console.log("Database connected");
 });
-
-const app = express();
 
 app.use(cors());
 app.use(express.json());
