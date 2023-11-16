@@ -1,0 +1,173 @@
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/6545beb44bab7a85e530931b
+
+###
+POST http://localhost:3000/users 
+Content-Type: application/json
+
+{
+    "_id": "6544b10fc898f9d8099ea762",
+    "name": "Alberto",
+    "password": "f6e0a1e2ac41945a9aa7ff8a8aaa0cebc12a3bcc981a929ad5cf810a090e11ae",
+    "balance": 1200000000,
+    "job": "Student",
+    "gender": "male",
+    "transaction": [
+      {
+        "title": "Buy seafood",
+        "amount": 1000000,
+        "time": "2023-09-09",
+        "category": "expense",
+        "_id": "6548ed8ef06765493c6bc3fc"
+      },
+      {
+        "title": "Salaray",
+        "amount": 12000000,
+        "time": "2019-10-12",
+        "category": "income",
+        "_id": "6548f72cf06765493c6bc576"
+      },
+      {
+        "title": "Watching movie",
+        "amount": 1300000,
+        "time": "2022-08-22",
+        "category": "expense",
+        "_id": "654a0caaa4ad1ec979813e7b"
+      },
+      {
+        "title": "Makan",
+        "amount": 103000,
+        "time": "2023-11-07",
+        "category": "expense",
+        "_id": "654a107ca4ad1ec979813ec2"
+      },
+      {
+        "title": "buy Starbucks",
+        "amount": 103000,
+        "time": "2023-10-08",
+        "category": "expense",
+        "_id": "654a107ca4ad1ec979813ec2"
+      },
+      {
+        "title": "Mid Salary",
+        "amount": 2030000,
+        "time": "2023-10-06",
+        "category": "income",
+        "_id": "654a107ca4ad1ec979813ec2"
+      },
+      {
+        "title": "buy Starbucks",
+        "amount": 203000,
+        "time": "2023-11-07",
+        "category": "expense",
+        "_id": "654a107ca4ad1ec979813ec2"
+      }
+    ],
+    "target": [
+      {
+        "title": "Kendaraan",
+        "description": "Beli Avanza untuk perusahaan",
+        "amount": "230000000",
+        "time": "2025-12-12",
+        "isDone": true,
+        "_id": "65543c51d977e7d18ec7e1e0"
+      },
+      {
+        "title": "Properti",
+        "description": "Beli rumah untuk kerja",
+        "amount": "1720000000",
+        "time": "2025-12-12", 
+        "isDone": false,
+        "_id": "65543c51d977e7d18ec7e1e1"
+      }
+    ],
+    "__v": 0
+}
+
+###
+PATCH http://localhost:3000/users/6544b10fc898f9d8099ea762
+Content-Type: application/json
+
+{
+    "_id": "6544b10fc898f9d8099ea762",
+    "name": "Alberto",
+    "password": "f6e0a1e2ac41945a9aa7ff8a8aaa0cebc12a3bcc981a929ad5cf810a090e11ae",
+    "balance": 1200000000,
+    "job": "Student",
+    "gender": "male",
+    "transaction": [
+      {
+        "title": "Buy seafood",
+        "amount": 1000000,
+        "time": "2023-09-09",
+        "category": "expense",
+        "_id": "6548ed8ef06765493c6bc3fc"
+      },
+      {
+        "title": "Salaray",
+        "amount": 12000000,
+        "time": "2019-10-12",
+        "category": "income",
+        "_id": "6548f72cf06765493c6bc576"
+      },
+      {
+        "title": "Watching movie",
+        "amount": 1300000,
+        "time": "2022-08-22",
+        "category": "expense",
+        "_id": "654a0caaa4ad1ec979813e7b"
+      },
+      {
+        "title": "Makan",
+        "amount": 103000,
+        "time": "2023-11-07",
+        "category": "expense",
+        "_id": "654a107ca4ad1ec979813ec2"
+      },
+      {
+        "title": "buy Starbucks",
+        "amount": 103000,
+        "time": "2023-10-08",
+        "category": "expense",
+        "_id": "654a107ca4ad1ec979813ec2"
+      },
+      {
+        "title": "Mid Salary",
+        "amount": 2030000,
+        "time": "2023-10-06",
+        "category": "income",
+        "_id": "654a107ca4ad1ec979813ec2"
+      },
+      {
+        "title": "buy Starbucks",
+        "amount": 203000,
+        "time": "2023-11-07",
+        "category": "expense",
+        "_id": "654a107ca4ad1ec979813ec2"
+      }
+    ],
+    "target": [
+      {
+        "title": "Kendaraan",
+        "description": "Beli Avanza untuk perusahaan",
+        "amount": "230000000",
+        "time": "2025-12-12",
+        "isDone": true,
+        "_id": "65543c51d977e7d18ec7e1e0"
+      },
+      {
+        "title": "Properti",
+        "description": "Beli rumah untuk kerja",
+        "amount": "1720000000",
+        "time": "2025-12-12", 
+        "isDone": false,
+        "_id": "65543c51d977e7d18ec7e1e1"
+      }
+    ],
+    "__v": 0
+}
+
+###
+DELETE http://localhost:3000/users/65557ef95f1da3bed89ad0bf
